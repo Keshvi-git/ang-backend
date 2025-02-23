@@ -1,0 +1,46 @@
+
+<section class="py-5 overflow-hidden">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-md-12">
+  
+          <div class="section-header d-flex flex-wrap justify-content-between mb-5">
+            <h2 class="section-title">Category</h2>
+  
+            <div class="d-flex align-items-center">
+              <a href="#" class="btn btn-primary me-2">View All</a>
+              <div class="swiper-buttons">
+                <button class="swiper-prev category-carousel-prev btn btn-yellow">❮</button>
+                <button class="swiper-next category-carousel-next btn btn-yellow">❯</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+  
+          <div class="category-carousel swiper">
+            <div class="swiper-wrapper">
+              <a class="nav-link swiper-slide text-center" *ngFor="let temp of category">
+                <img src="{{ temp.images[0] }}" class="category-img" alt="Category Thumbnail">
+                <h4 class="fs-6 mt-3 fw-normal category-title">{{ temp.name }}</h4>
+              </a>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <div *ngIf="selectedCategory">
+    <h3>{{ selectedCategory.name }}</h3>
+    <p>{{ selectedCategory.description }}</p>
+    <img [src]="selectedCategory.images[0]" class="img-fluid" alt="{{ selectedCategory.name }}">
+  </div> -->
+
+  
+  <!-- (click)="viewCategory(temp._id)" -->

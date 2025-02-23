@@ -1,0 +1,9 @@
+
+  .category-img {
+    width: 160px;  /* Adjust size as needed */
+    height: 160px; /* Ensure it's square */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the circle properly */
+    display: block;
+    margin: 0 auto;
+  }
