@@ -53,5 +53,14 @@ const DelProduct = async (req, res) => {
     res.status(500).json({ message: "Error deleting product", error: error.message });
   }
 };
-
-module.exports = { GetAllPro, IdProduct, AddPro, UpdatePro, DelProduct };
+const getproduct = async (req, res) => {
+  try {
+    const { categoryId } = req.params;
+    const products = await Product.find({ category: categoryId }); 
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ error: "Error fetching products" });
+  }
+};
+  
+module.exports = { GetAllPro, IdProduct, AddPro, UpdatePro, DelProduct, getproduct};
